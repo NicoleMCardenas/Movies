@@ -1,0 +1,73 @@
+body{
+    background-color: black;
+    color: antiquewhite;
+}
+header{
+    display: flex;
+     align-items:center;
+    justify-content: space-between;
+    padding: 0px 25px;
+}   
+
+header img{
+    width: 200px;
+}
+
+.nav_menu{
+display: flex;
+gap: 30px;
+font-family: "Satoshi", sans-serif;
+font-size: 16px;
+font-weight: 600;
+}
+.nav_menu a:hover {
+    color: rgb(233, 202, 27);
+    transition: color 0.3s ease;
+}
+
+a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+#contenedor_Peliculas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+h1{
+    font-family: "Satoshi", sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    padding: 0px 25px;
+    text-align: center;
+}
+footer p{
+    text-align: left;
+    padding: 10px;
+    
+}
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.tarjetaPeli{
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+.tarjetaPeli img{
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.seccion_cont{
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}

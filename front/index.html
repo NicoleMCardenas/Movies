@@ -1,13 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet"/>
+      <link rel="stylesheet" href="./styles/reset.css"/>
+      <link rel="stylesheet" href="./styles/styles.css"/>
     <title>Document</title>
   </head>
+  
   <body>
-    <h1>Proyecto de M2</h1>
-
+    <header> 
+      <img src="./styles/assets/img/logocinema.png"/>
+      <nav>
+        <ul class="nav_menu">
+          <li><a href="./index.html">INICIO</a></li>
+          <li><a href="./scripts/peliculasrecientes.html">PELICULAS RECIENTES</a></li>
+          <li><a href="./scripts/noticias.html">NOTICIAS</a></li>
+          <li>CALIFICAR PELICULA</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+       <h1>Películas Destacadas</h1>
+      <section>
+         <div id="contenedor_Peliculas" class="contenedor">
+          <!--Tarjetas dinámicas de películas-->
+         </div>
+      </section>
+    </main>
+  <footer>
+    <p>&copy;2025 Proyecto de Películas Modulo 2</p>
+  </footer>
     <script src="./scripts/tempData.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
