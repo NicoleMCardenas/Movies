@@ -30,30 +30,3 @@ const tempData = [
       "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
   },
 ];
-
-//Mapear teamData para construir tarjetas
-function crearTarjetasPelicula(pelicula) {
-  const div= document.createElement ('div');
-  div.classList.add('tarjetaPeli');
-
-  div.innerHTML=`
-  <img src="${pelicula.poster}" alt="${pelicula.title}" />
-      <h2>${pelicula.title}</h2>
-    <p><strong>Año:</strong> ${pelicula.year}</p>
-    <p><strong>Director:</strong> ${pelicula.director}</p>
-    <p><strong>Duración:</strong> ${pelicula.duration}</p>
-    <p><strong>Género:</strong> ${pelicula.genre.join(', ')}</p>
-    <p><strong>Rating:</strong> ⭐ ${pelicula.rate}</p>
-  `;
-
-  return div;
-}
-function cargarPeliculas() {
-  const contenedor = document.getElementById('contenedor_Peliculas');
-  tempData.forEach(pelicula => {
-    const tarjetasPelicula = crearTarjetasPelicula(pelicula);
-    contenedor.appendChild(tarjetasPelicula);
-  });
-}
-document.addEventListener('DOMContentLoaded', cargarPeliculas);
-

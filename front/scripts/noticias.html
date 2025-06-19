@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--Bootstrap-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>      
+<!--FontsandStyles-->
       <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet"/>
       <link rel="stylesheet" href="../styles/reset.css" />
       <link rel="stylesheet" href="../styles/styles.css" />
@@ -15,33 +21,54 @@
       <nav>
         <ul class="nav_menu">
           <li><a href="../index.html">INICIO</a></li>
-          <li><a href="./scripts/peliculasrecientes.html">PELICULAS RECIENTES</a></li>
-          <li><a href="./scripts/noticias.html">NOTICIAS</a></li>
+          <li><a href="../scripts/peliculasrecientes.html">PELICULAS RECIENTES</a></li>
+          <li><a href="../scripts/noticias.html">NOTICIAS</a></li>
           <li>CALIFICAR PELICULA</li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <h1>NOTICIAS</h1>
-      <section class="seccion_cont">
-        <p>
-          Pixar anuncia "Hoppers", una película que describen como una mezcla de "Avatar", "Misión Imposible" y "Planeta Tierra". Se espera su estreno en marzo de 2026. Además, la serie de Harry Potter suma nuevos actores para los papeles de los Malfoy y los Dursley. También se informa que James Gunn confirmó el regreso de Wonder Woman al nuevo universo cinematográfico de DC, aunque con una nueva actriz. En cuanto a estrenos cercanos, "El año nuevo que nunca llegó", "Kabaddi", "Elio", "Exterminio: La Evolución", "F1", "La Venganza", "M3GAN 2.0" y "Miley Cyrus: Something Beautiful" están programados para estrenarse pronto. 
-          Otras noticias relevantes incluyen:<hr>
-          "I Eat Poop" al cine: La compañía de Ryan Reynolds producirá una película basada en el libro infantil del mismo nombre. 
-          Cibeles de Cine 2025: Reveló su programación para este año. 
-          "Amarga Navidad": Se acerca lo nuevo de Almodóvar. 
-          Película más vista en México: "¿Y cómo es él?" de Ariel Winograd fue la película mexicana más vista. 
-          Impacto de la pandemia: La pandemia afectó la industria cinematográfica, con retrasos y cancelaciones de estrenos, y detención de producciones. 
-          Bono Cultural Joven 2025: Jóvenes nacidos en 2007 pueden solicitarlo a partir de hoy. 
-          Festival de Cine de Guadalajara: El documental "Llamarse Olimpia" ganó el Premio Mezcal a mejor película. 
-          Fallecimiento de Harris Yulin: El actor secundario de películas como "Scarface" y "Training Day" falleció. 
-        </p>
+    <main class="px-2 px-md-4 px-lg-5">
+      <h2 class="tith2 mb-4">Noticias</h2>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="../styles/assets/img/Hoppers.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-dark fw-bold">Pixar anuncia "Hoppers"</h5>
+        <p class="card-text text-dark">Una película que describen como una mezcla de "Avatar", "Misión Imposible" y "Planeta Tierra". Se espera su estreno en marzo de 2026.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="../styles/assets/img/harrypotter.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-dark fw-bold">"Harry Potter" La serie:</h5>
+        <p class="card-text text-dark">Harry Potter suma nuevos actores para los papeles de los Malfoy y los Dursley. </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="../styles/assets/img/ryanreynolds.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-dark fw-bold">"I Eat Poop" al cine:</h5>
+        <p class="card-text text-dark">La compañía de Ryan Reynolds producirá una película basada en el libro infantil del mismo nombre. 
+          Cibeles de Cine 2025: Reveló su programación para este año.</p>
+      </div>
+    </div>
+  </div>
+    </div>
+
       </section>
     </main>
 
-    <footer>
-      <p>&copy;2025 Proyecto de Películas Módulo 2</p>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy;2025 Proyecto de Películas Modulo 2</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+
+
