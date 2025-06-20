@@ -10,10 +10,12 @@ header{
     justify-content: space-between;
     padding: 0px 25px;
     color: antiquewhite;
+    height: 120px;
 }   
 
 header img{
     width: 200px;
+    margin-top: 30px;
 }
 
 .nav_menu{
@@ -26,11 +28,12 @@ font-weight: 600;
 .nav_menu a:hover {
     color:gold;
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 a{
-    text-decoration: none;
     color: antiquewhite;
+    text-decoration: none;
 }
 p{
     font-family: "Satoshi", sans-serif;
@@ -63,13 +66,7 @@ h1, h2{
     text-align: center;
      color: antiquewhite;
 }
-#fotid{
-    text-align: left;
-    padding: 10px;
-    font-weight: 600;
-    font-size: 15px;
-    
-}
+
 .contenedor{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -96,10 +93,7 @@ h1, h2{
 }
 
 /* PAGINAS ESTATICAS */
-
-
-.seccion_pelisrecientes{
-    
+/* .seccion_pelisrecientes{
 display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -107,8 +101,8 @@ display: flex;
     gap: 0;
     flex-wrap: wrap;
     margin: 10px;
-}
-
+} */
+/* 
 .img_pelisrecientes{
     width:200px;
     height: auto;
@@ -124,4 +118,4 @@ display: flex;
     gap: 1.5rem;
     margin-top: 60px;
     
-}
+} */
