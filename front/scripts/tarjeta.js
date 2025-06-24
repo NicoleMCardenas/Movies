@@ -9,9 +9,9 @@
             <h2>${pelicula.title}</h2>
             <p>Año: ${pelicula.year}</p>
             <p>Director: ${pelicula.director}</p>
-            <p>Duracion: ${pelicula.duration}</p>
-            <p>Genero: ${pelicula.genre.join(', ')}</p>
-            <p>Calificacion:⭐ ${pelicula.rate}</p>
+            <p>Duración: ${pelicula.duration}</p>
+            <p>Género: ${pelicula.genre.join(', ')}</p>
+            <p>Calificación: ⭐ ${pelicula.rate}</p>
         `;
         contenedor.appendChild(tarjeta);
              });
