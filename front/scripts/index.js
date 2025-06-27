@@ -2,8 +2,10 @@ const axios = require('axios')
 
 const renderTarjeta = require("./tarjeta")
        
-    axios.get('https://students-api.up.railway.app/movies')
+    axios.get('http://localhost:3000/movies')
         .then((info) => {
+            console.log(info.data);
+            
               renderTarjeta(info.data)
         })
         .catch(() =>{

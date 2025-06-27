@@ -1,10 +1,10 @@
 const {Router}=require("express");
 
-const { getMovies } = require("../controllers");
+const moviesController = require("../controllers/moviesController");
 
-const router=Router();
+const indexRouter=Router();
 //TIPO DE SOLICITUD A RECIBIR
-router.get("/movies", getMovies);
+indexRouter.get("/movies", moviesController.getMovies);
 
-module.exports=router;
+module.exports=indexRouter;
 
