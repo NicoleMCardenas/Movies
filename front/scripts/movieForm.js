@@ -5,55 +5,51 @@ const formSubmit = (e) => {
     title: document.getElementById("title").value.trim(),
     year: Number(document.getElementById("year").value.trim()),
     director: document.getElementById("director").value.trim(),
-    duration: {
-      hours: Number(document.getElementById("hours").value.trim()),
-      minutes: Number(document.getElementById("minutes").value.trim())
-    },
-    genre: document.getElementById("genre").value.trim(),
+    hours: document.getElementById("hours").value.trim(),
+    minutes: document.getElementById("minutes").value.trim(),
+    genre: Array.from(document.getElementById("genre").selectedOptions).map(option => option.value),
     rate: Number(document.getElementById("rate").value.trim()),
-    poster: document.getElementById("poster").value.trim()
+    poster: document.getElementById("poster").value.trim(),
   };
 
-for (const prop in newMovieData) {
-    if (typeof newMovieData[prop] === "object") {
-      for (const subProp in newMovieData[prop]) {
-        if (!newMovieData[prop][subProp]) {
-          alert(`Falta información en: ${subProp}`);
-          return;
-        }
-      }
-    } else {
-      if (!newMovieData[prop]) {
-        alert(`Falta información en: ${prop}`);
-        return;
-      }
-    }
-  }
+  // Validaciones usando newMovieData
+  if (!newMovieData.title) return alert("Falta información en: título");
+  if (!newMovieData.year) return alert("Falta información en: año");
+  if (!newMovieData.director) return alert("Falta información en: director");
+  if (!newMovieData.hours && !newMovieData.minutes) return alert("Falta información en: duración");
+  if (newMovieData.genre.length === 0) return alert("Falta información en: género");
+  if (!newMovieData.rate) return alert("Falta información en: calificación");
+  if (!newMovieData.poster) return alert("Falta información en: poster");
 
-console.log("Película creada:", newMovieData);
-  alert("La película fue creada con éxito");
+  const duration = `${parseInt(newMovieData.hours) || 0}h ${parseInt(newMovieData.minutes) || 0}min`;
+
+  axios.post("http://localhost:3000/movies", {
+    title: newMovieData.title,
+    year: newMovieData.year,
+    director: newMovieData.director,
+    duration: duration,
+    genre: newMovieData.genre,
+    rate: newMovieData.rate,
+    poster: newMovieData.poster
+  })
+    .then(() => {
+      alert("Película creada con éxito.");
+      customResetForm();
+      window.location.href = "../index.html";
+    })
+    .catch((error) => {
+      alert("Error al cargar la película.");
+      console.error(error);
+    });
 };
 
 const customResetForm = () => {
   const camposInput = ["title", "year", "director", "hours", "minutes", "rate", "poster"];
-
-  for (let id of camposInput) {
-    const campo = document.getElementById(id);
-    campo.value = "";
-    console.log("limpiamos el valor de: " + id)
-  };
+  camposInput.forEach(id => document.getElementById(id).value = "");
 
   const genre = document.getElementById("genre");
-  if (genre) genre.selectedIndex = 0;
+  if (genre) genre.selectedIndex = -1;
 };
 
-const buttonSubmit = document.querySelector("#submit");
-buttonSubmit.addEventListener("click", formSubmit);
-
-const buttonReset = document.querySelector("#reset")
-buttonReset.addEventListener("click", customResetForm)
-
-
-
-
-
+document.querySelector("#submit").addEventListener("click", formSubmit);
+document.querySelector("#reset").addEventListener("click", customResetForm);
