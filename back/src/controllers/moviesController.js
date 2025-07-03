@@ -1,17 +1,3 @@
-// const moviesService = require("../services/movieService");
-
-// module.exports = {
-//     getMovies: async (req,res) => {
-//         const movies = await moviesService.getMovies();
-//         res.status(200).json(movies);
-//     },
-//     createMovie: async(req,res) =>{
-//         const {title, year, director, hours, minutes, genre, rate, poster} = req.body;
-//         const newMovie= await moviesService.createMovie(title, year, director, hours, minutes, genre, rate, poster);
-//         res.status(201).json(newMovie);
-//     },
-// };
-
 const moviesService = require("../services/movieService");
 
 module.exports = {

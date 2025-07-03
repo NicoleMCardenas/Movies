@@ -1,5 +1,7 @@
-const formSubmit = (e) => {
-  e.preventDefault();
+  import axios from 'axios';
+if (window.location.pathname.includes('crearPeliculas.html')) {
+  const formSubmit = (e) => {
+    e.preventDefault();
 
   const newMovieData = {
     title: document.getElementById("title").value.trim(),
@@ -12,7 +14,6 @@ const formSubmit = (e) => {
     poster: document.getElementById("poster").value.trim(),
   };
 
-  // Validaciones usando newMovieData
   if (!newMovieData.title) return alert("Falta información en: título");
   if (!newMovieData.year) return alert("Falta información en: año");
   if (!newMovieData.director) return alert("Falta información en: director");
@@ -53,3 +54,4 @@ const customResetForm = () => {
 
 document.querySelector("#submit").addEventListener("click", formSubmit);
 document.querySelector("#reset").addEventListener("click", customResetForm);
+}

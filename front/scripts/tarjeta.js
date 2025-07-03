@@ -1,5 +1,6 @@
- const contenedor=document.getElementById("contenedor_Peliculas");
  const renderTarjeta = (data) => {
+const contenedor=document.getElementById("contenedor_Peliculas");
+if(!contenedor) return;
  data.forEach((pelicula) => {
             const tarjeta = document.createElement("div")
             tarjeta.className="tarjetas";
@@ -16,4 +17,5 @@
         contenedor.appendChild(tarjeta);
              });
              };
- module.exports = renderTarjeta;
+
+export default renderTarjeta;

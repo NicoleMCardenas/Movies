@@ -1,10 +1,11 @@
 const app = require("./src/server");
 const conDb = require("./src/config/conDb");
+require("dotenv").config();
 
 conDb()
   .then((res) =>{
-   app.listen(3000,() => {
-    console.log("Servidor escuchando puerto 3000");
+   app.listen(process.env.PORT,() => {
+    console.log("Servidor escuchando puerto" + process.env.PORT)
    });
 })
 .catch((err) =>{
