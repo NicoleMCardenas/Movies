@@ -9,7 +9,6 @@ if (
 ) {
   axios.get('http://localhost:3000/movies')
     .then((info) => {
-      console.log(info.data);
       renderTarjeta(info.data);
     })
     .catch(() => {
