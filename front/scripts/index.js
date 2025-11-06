@@ -7,7 +7,7 @@ if (
   window.location.pathname === '/' ||
   window.location.pathname === '/index.html'
 ) {
-  axios.get('http://localhost:3000/movies')
+  axios.get('/api/movies')
     .then((info) => {
       renderTarjeta(info.data);
     })
