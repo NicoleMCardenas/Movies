@@ -24,7 +24,7 @@ if (window.location.pathname.includes('crearPeliculas.html')) {
 
   const duration = `${parseInt(newMovieData.hours) || 0}h ${parseInt(newMovieData.minutes) || 0}min`;
 
-  axios.post("http://localhost:3000/movies", {
+  axios.post("/api/movies", {
     title: newMovieData.title,
     year: newMovieData.year,
     director: newMovieData.director,
