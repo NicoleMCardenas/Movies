@@ -1,5 +1,5 @@
 body{
-    background-image: url("/styles/assets/img/fondo.png");
+    background-image: url("./assets/img/fondo.png");
     background-size: cover;
     transition: background-color 0.3s ease-in-out;
      color: antiquewhite;
