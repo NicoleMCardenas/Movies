@@ -1,6 +1,6 @@
 import axios from 'axios';
 import renderTarjeta from './tarjeta.js';
-import './movieForm.js'; 
+import '/scripts/movieForm.js'; 
 
 if (
   window.location.pathname.includes('index.html') ||
